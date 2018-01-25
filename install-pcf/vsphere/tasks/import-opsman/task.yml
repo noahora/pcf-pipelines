@@ -4,7 +4,33 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: czero/rootfs}
+  source:
+    ca_certs:
+    - cert: |
+        -----BEGIN CERTIFICATE-----
+        MIIDmzCCAoOgAwIBAgIJAL194Ha8O4DjMA0GCSqGSIb3DQEBCwUAMGQxCzAJBgNV
+        BAYTAlhYMRUwEwYDVQQHDAxEZWZhdWx0IENpdHkxHDAaBgNVBAoME0RlZmF1bHQg
+        Q29tcGFueSBMdGQxIDAeBgNVBAMMF2F1c2Rsc2RvY3IxLnVzLmRlbGwuY29tMB4X
+        DTE4MDEyMjE3MTMxMFoXDTIwMDEyMjE3MTMxMFowZDELMAkGA1UEBhMCWFgxFTAT
+        BgNVBAcMDERlZmF1bHQgQ2l0eTEcMBoGA1UECgwTRGVmYXVsdCBDb21wYW55IEx0
+        ZDEgMB4GA1UEAwwXYXVzZGxzZG9jcjEudXMuZGVsbC5jb20wggEiMA0GCSqGSIb3
+        DQEBAQUAA4IBDwAwggEKAoIBAQDGvGivBC+X5fX5O3ZkJ8wQ61izTxQWtYlkVXJM
+        44DcbXPARWGzfPDTzRjwYFOTqj4sPaB9VUnuCtrQZAqOQ2luhMR61MdeNlCL9oNC
+        H3ryLOTIbWctC7rrEt5wqvjndMmABiT+fV7LBzBzmdTkNUFDR/++40rcTL/fkBJA
+        TgjB4MRKSc/3gbkcN3zkwAv6IUwFqFuci615JQAj2bQdaj0QRgOTYB4F3hZgFZ5Q
+        5dTZzyaUXryjNvYxvZ9XYhM1Bin7ofsmJOqKs40SN7Ajj17eY+UKpFqBaizpm6je
+        nVwBscx0XOy5TpoKgmqd+O3iPi+ov5AXqYzd78iA1VOdNoCfAgMBAAGjUDBOMB0G
+        A1UdDgQWBBQt2TYKosKRASMLxY5ytKSNPOwZgDAfBgNVHSMEGDAWgBQt2TYKosKR
+        ASMLxY5ytKSNPOwZgDAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQCS
+        XFW/H/y/cpXzbcz18WzPpKCzujUAsfWehZxxopOABF3MlearoMy/QdqCFhiFl4dg
+        2HyFe6r7b/AaqvEAz4z5Ww+yEa7tEWCSas8R6Tx/kPK28cRn/N8axWJIU74MgvOK
+        ig78IWXeOqndxdyMtbwxgYJBed7TWJcKmMJfOOOLHR79OjWDa604A6xvT0rR6ajU
+        otKk2FG+Vn5rH/m49q63hBvKXoX4kVPrJDX1i1mPUKyyanOobl56PKssUVAOLuP8
+        +mcpD73/mvmbAINmiUb+NzuN+LMF9KT+J/1te5sBYL6lGdgNw4QdnrlfMwIBW0h4
+        RGnqE1cG4BjWusGwYWI2
+        -----END CERTIFICATE-----
+      domain: ausdlsdocr1.us.dell.com
+    repository: ausdlsdocr1.us.dell.com/rootfs
 
 params:
   GOVC_INSECURE:
